@@ -3,7 +3,7 @@ int logicalSize = 0;
         int minDay = 20;
         int rangeDay = max - min + 1;
 	for (int i = 0; i < 10; i++) {
-            int totalDay= (int)(Math.random() * range) + min;
+            int totalDay = (int)(Math.random() * range) + min;
 }
 
 public void huntBearHunter(){
@@ -13,23 +13,24 @@ public void huntBearHunter(){
   
         // generate random numbers within 1 to 5
         for (int i = 0; i < 5; i++) {
-            int rand = (int)(Math.random() * range) + min;
+            int rand = (int)((Math.random() * range + min);
 
 if(rand == 1){
 
-.setText("the bear has successfully been killed! +5 meat");
+lblOutput.setText("the bear has successfully been killed! +5 meat");
 //Add a day count.
 }
+
 else{
 
-.setText("the bear has mauled you and you’re bleeding internally and externally. You have died.");
+lblOutput.setText("the bear has mauled you and you’re bleeding internally and externally. You have died.");
 }
 
         }
 }
 public void huntBearBoyscout(){
  
- If(job == 1){
+ if(job == 1){
  int max = 10;
         int min = 1;
         int range = max - min + 1;
@@ -40,11 +41,11 @@ public void huntBearBoyscout(){
 
 if(rand = 1) {
 
-.setText("the bear has successfully been killed! +5 meat");
-//Add a day count. As
+lblOutput.setText("the bear has successfully been killed! +5 meat");
+//Add a day count.
 }
 else {
 
-.setText("the bear has mauled you and you’re bleeding internally and externally. You have died.");
+lblOutput.setText("the bear has mauled you and you’re bleeding internally and externally. You have died.");
 }
 }
