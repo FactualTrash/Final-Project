@@ -28,24 +28,25 @@ lblOutput.setText("you have sucessfully made a shelter for the night!");
 }
 }	
 	public void huntBear(int job, int day){
-
+String successMessage = "The bear has successfully been killed! +5 meat"
+String deathMessage = "The bear has mauled you and you’re bleeding internally and externally." "\n" "You have died.";
 if(job == 1){
  int max = 3;
-        int min = 1;
-        int range = max - min;
+        int min = 1;//Why declare extra variables here when you don't need to?
+        int range = max - min;//And do extra processing that seems irrelevant
   
-        // generate random numbers within 1 to 10
-            int rand = (int)(Math.random() * range) + min;
+        // generate random numbers within 1 to 10//Is it not 1 to 2?
+            int rand = (int)(Math.random() * range) + min;//How,range is 2 and min is 1 so its a random number within 1 to 2
 
 if(rand == 1) {
 
-lblOutput.setText("the bear has successfully been killed! +5 meat");
+lblOutput.setText(successMessage);//Increased effeciency and decreased proccessing by making all statements into few strings
 day++;
 }
 
 else {
 
-lblOutput.setText("the bear has mauled you and you’re bleeding internally and externally. You have died.");
+lblOutput.setText(deathMessage);//Changed it to be on a different line for a dramatic effect
 day++;
 }
 
@@ -60,17 +61,22 @@ if (job == 0){
         
 if(randHunter == 1){
 
-lblOutput.setText("the bear has successfully been killed! +5 meat");
+lblOutput.setText(successMessage);
 day++;
 }
 }
 
 else{
 
-lblOutput.setText("the bear has mauled you and you’re bleeding internally and externally. You have died.");
+lblOutput.setText(deathMessage);
 }
 
         }
 }
-}
-
+}	
+	public addInventory(item a,int quantity ){
+		a = quantity + getAmount; 
+	}
+	public void openInventory{
+		
+	}
