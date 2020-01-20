@@ -15,8 +15,9 @@ public class SecondScreen extends javax.swing.JFrame {
     /**
      * Creates new form SecondScreen
      */
-    public SecondScreen() {
+    public SecondScreen(TitleScreen T) {
         initComponents();
+        firstWindow = T;
     }
     private Intro introScreen;
     /**
@@ -106,8 +107,5 @@ public class SecondScreen extends javax.swing.JFrame {
     private javax.swing.JButton btnJob2;
     private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
-    public SecondScreen(TitleScreen m){
-        initComponents();
-        firstWindow = m;
-    }
+ 
 }

@@ -11,8 +11,11 @@ package islandgame;
  */
 public class Intro extends javax.swing.JFrame {
 
-    SecondScreen jobSelectWindow;
-
+    SecondScreen jobSelectWindow;//Previous window
+    private Game gameWindow;//Next window
+    int counter = 0;
+    String firstMessage = "";
+    String secondMessage = "";
     /**
      * Creates new form Intro
      */
@@ -33,7 +36,7 @@ public class Intro extends javax.swing.JFrame {
         btnBack = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtOut = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -51,6 +54,11 @@ public class Intro extends javax.swing.JFrame {
         getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, -1, -1));
 
         jButton2.setText("Next");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 610, -1, -1));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -61,16 +69,16 @@ public class Intro extends javax.swing.JFrame {
         jScrollPane1.setPreferredSize(new java.awt.Dimension(928, 637));
         jScrollPane1.setWheelScrollingEnabled(false);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Papyrus", 0, 48)); // NOI18N
-        jTextArea1.setRows(4);
-        jTextArea1.setUI(null);
-        jTextArea1.setAutoscrolls(false);
-        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTextArea1.setMaximumSize(new java.awt.Dimension(928, 637));
-        jTextArea1.setMinimumSize(new java.awt.Dimension(928, 637));
-        jScrollPane1.setViewportView(jTextArea1);
+        txtOut.setEditable(false);
+        txtOut.setColumns(20);
+        txtOut.setFont(new java.awt.Font("Papyrus", 0, 48)); // NOI18N
+        txtOut.setRows(4);
+        txtOut.setUI(null);
+        txtOut.setAutoscrolls(false);
+        txtOut.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        txtOut.setMaximumSize(new java.awt.Dimension(928, 637));
+        txtOut.setMinimumSize(new java.awt.Dimension(928, 637));
+        jScrollPane1.setViewportView(txtOut);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 928, 640));
 
@@ -82,10 +90,30 @@ public class Intro extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        counter++;
+        switch (counter) {
+            case 1:
+                txtOut.setText(firstMessage);
+                break;
+            case 2:
+                txtOut.setText(secondMessage);
+                break;
+            case 3:
+                if(gameWindow == null){
+                    gameWindow = new Game(this);
+                }   gameWindow.setVisible(true);
+                this.setVisible(false);
+                break;
+            default:
+                break;
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea txtOut;
     // End of variables declaration//GEN-END:variables
 }
