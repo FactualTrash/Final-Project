@@ -7,6 +7,7 @@ package islandgame;
 
 public class Methods {
  
+	boolean HasShelter;
  int logicalSize = 0;
  int maxDay = 23;
  int minDay = 20;
@@ -15,7 +16,18 @@ public class Methods {
 	
             int totalDay = (int)(Math.random() * rangeDay + minDay);
 
-public void huntBear(int job, int day){
+public void buildShelter{
+int houseFail = 1;
+int houseSuccess 2;
+int houseChoice = (int)(Math.random() * houseFail + houseSuccess);
+if(houseChoice == houseFail){
+lblOutput.setText("your house is in shambles and cannot fit a small dog, you do not have shelter. you are likely to freeze in the night.");
+}
+else{
+lblOutput.setText("you have sucessfully made a shelter for the night!");
+}
+}	
+	public void huntBear(int job, int day){
 
 if(job == 1){
  int max = 3;
