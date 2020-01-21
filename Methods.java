@@ -1,7 +1,6 @@
 /*
  * B. Hoard, R. Wolforth, D. Stephenson
  * Jan. 19 2020
- * and open the template in the editor.
  */
 package islandgame;
 
